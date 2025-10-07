@@ -15,6 +15,9 @@
 document.querySelector('CSSのセレクター');
 ```
 
+- id を取得する場合は#
+- class を取得する場合は.
+
 #### テキストの追加
 
 ```
