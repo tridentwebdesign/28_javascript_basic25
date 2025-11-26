@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q4/5</title>
+    <style>
+      .field {
+        height: 2000px;
+        position: relative;
+      }
+      .target {
+        position: absolute;
+        font-size: 2em;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="field">
+      <button class="target">ここをクリック</button>
+    </div>
+    <script>
+      const btn = document.querySelector('.target');
+      const y = Math.floor(Math.random() * 1500);
+      btn.style.top = y + 'px';
+
+      btn.addEventListener('click', function () {
+        console.log(scrollY);
+      });
+
+      //q5
+      const viewHeight = document.documentElement.clientHeight;
+
+      window.addEventListener('scroll', function () {
+        const nowHeight = window.scrollY;
+        const btnmove = parseInt(btn.style.top);
+        console.log(nowHeight, btnmove);
+
+        if (btnmove + viewHeight > nowHeight) {
+          console.log('ボタンより上です。');
+        } else {
+          console.log('ボタンより下です。');
+        }
+
+        // 現在のスクロール量 → window.scrollY
+        // ボタンの位置 → parseInt(btn.style.top)
+        // スクロール量がボタンの位置より小さい場合：consoleに「ボタンより上です」
+        // スクロール量がボタンの位置より大きい場合：consoleに「ボタンより下です」
+      });
+    </script>
+  </body>
+</html>

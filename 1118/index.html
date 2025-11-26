@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>数字<span></span></h1>
+    <a href="#" class="groupsite" target="_blank">Webサイト</a>
+    <button>レッツゴー</button>
+    <script>
+      const weblink = [
+        'https://candytune.asobisystem.com/',
+        'https://sweetsteady.asobisystem.com/',
+        'https://cutiestreet.asobisystem.com/',
+      ];
+      document.querySelector('button').addEventListener('click', function () {
+        //0〜３の数値
+        const title = Math.floor(Math.random() * 4);
+        //必要な要素を取得
+        const h1inSpan = document.querySelector('h1 span');
+        h1inSpan.textContent = title;
+
+        //ここに記述します。
+
+        //ここまで
+      });
+    </script>
+  </body>
+</html>
