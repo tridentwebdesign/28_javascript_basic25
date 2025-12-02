@@ -1,0 +1,19 @@
+body {
+  transition: all 3s ease-in-out;
+  opacity: 0;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.btns {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  button {
+    padding: 10px;
+  }
+}
