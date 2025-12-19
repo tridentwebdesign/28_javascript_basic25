@@ -13,7 +13,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         background-color: #f0f0f0;
         margin: 40px;
@@ -58,7 +57,18 @@
       //マウスアウトしたら、元に戻してください。
       const xg = document.querySelectorAll(".xg li");
       const member = document.querySelector(".member img");
-      const memberSrc = member.getAttribute("src");
+
+      for (let i = 0; i < xg.length; i++) {
+        xg[i].addEventListener('mouseover', function () {
+          const memberId = xg[i].id;
+          member.src = `images/xg/${memberId}.webp`;
+          member.alt = xg[i].textContent;
+        });
+        xg[i].addEventListener("mouseout", function () {
+          member.src = 'https://xgalx.com/xg/assets/img/common/logo_sitetitle.svg';
+          member.alt = "XGロゴ";
+        });
+      }
     </script>
   </body>
 </html>

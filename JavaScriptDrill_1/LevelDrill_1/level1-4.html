@@ -27,18 +27,28 @@
       //例:htmlから要素を取得し、テキストも取得し変数に代入する。
       const docomoText = document.querySelector(".sample").textContent;
       //抜き出したテキストと株式会社を組み合わせてコンソールに表示
-      console.log(corporation + docomoText);
+      console.log(corporation + docomoText); //株式会社NTTドコモ
 
       //上記htmlから会社名を取得し変数に代入し、コメント欄に記述されている前株もしくは後株でコンソールに表示させてください。
       // トヨタ自動車株式会社
+      const toyotaText = document.querySelector(".toyota").textContent;
+      console.log(toyotaText + corporation); // トヨタ自動車株式会社
 
       // 株式会社柿安本店
+      const kakiyasuText = document.querySelector(".kakiyasu").textContent;
+      console.log(kakiyasuText + corporation); // 株式会社柿安本店
 
       // カゴメ株式会社
+      const kagomeText = document.querySelector(".kagome").textContent;
+      console.log(kagomeText + corporation); // カゴメ株式会社
 
       // DMG森精機株式会社
+      const moriseikiText = document.querySelector(".moriseiki").textContent;
+      console.log(moriseikiText + corporation); // DMG森精機株式会社
 
       // 株式会社メニコン
+      const yamahaText = document.querySelector(".yamaha").textContent;
+      console.log(yamahaText + corporation); // 株式会社メニコン
     </script>
   </body>
 </html>

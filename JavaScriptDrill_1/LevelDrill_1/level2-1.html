@@ -28,15 +28,25 @@
       // 例
       // ねぎキムチ牛丼をquerySelectorで取得しコンソールで表示
       const negiKimchi = document.querySelector("li");
-      console.log(negiKimchi.textContent);
+      console.log(negiKimchi.textContent); //ねぎキムチ牛丼
 
       //牛丼をquerySelectorで取得しコンソールで表示
+      const gyudon = document.querySelector(".base");
+      console.log(gyudon.textContent); //牛丼
 
       //おんたまねぎキムチ牛丼をquerySelectorで取得しコンソールで表示※nth-childを使う。
+      const onTamaNegiKimchi = document.querySelector("li:nth-child(2)");
+      console.log(onTamaNegiKimchi.textContent); //おんたまねぎキムチ牛丼
 
       //高菜明太マヨ牛丼をquerySelectorAll("li")で取得し、コンソールで表示
+      const listItems = document.querySelectorAll("li");
+      console.log(listItems[7].textContent); //高菜明太マヨ牛丼
 
       //class="negi"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+      const negiItems = document.querySelectorAll(".negi");
+      for (let i = 0; i < negiItems.length; i++) {
+        console.log(negiItems[i].textContent); //ねぎキムチ牛丼、おんたまねぎキムチ牛丼、マヨねぎキムチ牛丼、ねぎ玉牛丼
+      }
     </script>
   </body>
 </html>

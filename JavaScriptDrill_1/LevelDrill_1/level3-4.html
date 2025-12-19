@@ -25,11 +25,21 @@
       <li>寿司</li>
     </ul>
     <script>
-      //下記の変数を使って、ランダムで選ばれた数値の添字をクリックすると、console.logに「当たり」と表示してください。
+      //下記の変数を使って、ランダムで選ばれた数値と同じ添字をクリックすると、console.logに「当たり」と表示してください。
       //当たり以外は「はずれ」と表示してください。
 
       const num = Math.floor(Math.random() * 5);
       const foods = document.querySelectorAll(".foods li");
+
+      for(let i = 0; i < foods.length; i++) {
+        foods[i].addEventListener("click", function() {
+          if(i === num) {
+            console.log("当たり");
+          } else {
+            console.log("はずれ");
+          }
+        });
+      }
     </script>
   </body>
 </html>

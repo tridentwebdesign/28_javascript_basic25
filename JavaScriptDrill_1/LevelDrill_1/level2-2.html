@@ -28,15 +28,25 @@
       // 例
       // ソーセージマフィンをquerySelectorで取得しコンソールで表示
       const sausage = document.querySelector("li");
-      console.log(sausage.textContent);
+      console.log(sausage.textContent); //ソーセージマフィン
 
       //ホットケーキをquerySelectorで取得しコンソールで表示
+      const hotcake = document.querySelector(".hotcake");
+      console.log(hotcake.textContent); //ホットケーキ
 
-      //マックグリドルソーセージをquerySelectorで取得しコンソールで表示
+      //マックグリドルソーセージをquerySelectorで取得しコンソールで表示※nth-childを使う。
+      const macGriddleSausage = document.querySelector("li:nth-child(6)");
+      console.log(macGriddleSausage.textContent); //マックグリドルソーセージ
 
       //ソーセージエッグマフィンをquerySelectorAll("li")で取得し、コンソールで表示
+      const allItems = document.querySelectorAll("li");
+      console.log(allItems[1].textContent); //ソーセージエッグマフィン
 
       //class="griddle"をquerySelectorAllで取得し、for文で全てをコンソールで表示
+      const griddleItems = document.querySelectorAll(".griddle");
+      for (let i = 0; i < griddleItems.length; i++) {
+        console.log(griddleItems[i].textContent); //マックグリドルソーセージ、マックグリドルソーセージエッグ、マックグリドルベーコンエッグ
+      }
     </script>
   </body>
 </html>

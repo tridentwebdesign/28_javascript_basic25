@@ -15,11 +15,16 @@
     <p>だんだんと大きくなる<span style="font-size: 16px">文字</span></p>
 
     <script>
-      //下記の変数を使って、ボタンをクリックすると文字が2pxずつ大きくなるようにしてください。
+      //下記の変数を使って、ボタンをクリックすると文字（bigText）が2pxずつ大きくなるようにしてください。
       //デフォルトは16pxとなっています。
       const bigBtn = document.querySelector("button");
       const bigText = document.querySelector("span");
       let fontsize = 16;
+
+      bigBtn.addEventListener("click", () => {
+        fontsize += 2;
+        bigText.style.fontSize = fontsize + "px";
+      });
     </script>
   </body>
 </html>
